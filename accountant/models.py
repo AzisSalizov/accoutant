@@ -17,8 +17,8 @@ class Category(models.Model):
 class Note(models.Model):
     name = models.CharField(max_length=20)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    profile = models.ForeignKey(Profile,on_delete=models.CASCADE,verbose_name='notes')
-    category = models.ForeignKey(Category,on_delete=models.CASCADE, verbose_name='notes')
+    profile = models.ForeignKey(Profile,on_delete=models.CASCADE,verbose_name='profile')
+    category = models.ForeignKey(Category,on_delete=models.CASCADE, verbose_name='category')
     
     def __str__(self):
         return self.name
